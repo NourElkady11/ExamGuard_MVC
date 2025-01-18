@@ -138,6 +138,8 @@ namespace Presentation_Layer.Controllers
 						{
 							user.Firstname = userViewModel.FirstName;
 							user.Lastname = userViewModel.LastName;
+							user.UserName = userViewModel.Username;
+							user.Email = userViewModel.Email;
 							await userManager.UpdateAsync(user);
 							return RedirectToAction(nameof(Index));
 

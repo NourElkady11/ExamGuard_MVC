@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation_Layer.Controllers
 {
-    [Authorize(Roles = "Admin,Proctor")]
+    [Authorize(Roles = "Admin,SuperVisor")]
     public class ReportController : Controller
     {
         public IActionResult Index()

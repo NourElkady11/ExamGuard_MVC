@@ -76,7 +76,7 @@ namespace Presentation_Layer.Controllers
             var result = await roleManager.CreateAsync(role);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "User");
+                return RedirectToAction(nameof(Index));
             }
             else
             {
@@ -251,7 +251,9 @@ namespace Presentation_Layer.Controllers
 
 
                 }
-                return RedirectToAction(nameof(Edit), new { id = roleId });
+                return RedirectToAction("Index", "User");
+
+               /* return RedirectToAction(nameof(Edit), new { id = roleId });*/
 
 
             }

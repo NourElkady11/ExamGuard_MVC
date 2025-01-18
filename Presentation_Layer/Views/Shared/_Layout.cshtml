@@ -31,7 +31,7 @@
                             </li>
 
 
-                            @if (User.IsInRole("Admin") || User.IsInRole("Proctor"))
+                            @if (User.IsInRole("Admin") || User.IsInRole("SuperVisor"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="Index">Reports</a>
@@ -43,13 +43,13 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Roles</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Proctors</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
                                 </li>
                             }
-                            @if (User.IsInRole("Proctor"))
+                            @if (User.IsInRole("SuperVisor"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Exam" asp-action="Index">ModuleExams</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Exams" asp-action="Index">ManageExams</a>
                                 </li>
                             }
                             @if (User.IsInRole("Student"))

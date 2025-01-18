@@ -60,7 +60,7 @@ namespace Presentation_Layer.Controllers
                         if (roleResult.Succeeded)
                         {
                             signInManager.SignInAsync(user, isPersistent: true);
-                            return RedirectToAction("Index", "Home");
+                            return RedirectToAction(nameof(Login));
                         }
                         else
                         {
