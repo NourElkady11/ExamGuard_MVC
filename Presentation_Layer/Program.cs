@@ -30,8 +30,6 @@ namespace Presentation_Layer
             builder.Services.AddAutoMapper(typeof(Program).Assembly);
             builder.Services.AddAutoMapper(typeof(Reference).Assembly);
 
-    /*        builder.Services.AddScoped<IEmployeeRepoistory, EmployeeRepository>();
-            builder.Services.AddScoped<IDepartmentRepositorys, DepartmentRepositorys>();*/
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IExamService, ExamService>();

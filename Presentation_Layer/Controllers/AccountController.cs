@@ -51,14 +51,15 @@ namespace Presentation_Layer.Controllers
                     };
 
                     var result = userManager.CreateAsync(user, registerViewModel.Password).Result;
-
+                   
                     if (result.Succeeded)
                     {
-                        // Add the user to the default role "Student"
+                    
                         var roleResult = userManager.AddToRoleAsync(user,"Student").Result;
 
                         if (roleResult.Succeeded)
                         {
+                            signInManager.SignInAsync(user, isPersistent: true);
                             return RedirectToAction("Index", "Home");
                         }
                         else
@@ -112,7 +113,7 @@ namespace Presentation_Layer.Controllers
                         {
                             var claims = new List<Claim>
                             {
-                                new Claim(ClaimTypes.Name, user.Firstname) // Add Firstname as a claim
+                                new Claim(ClaimTypes.Name, user.Firstname) 
                             };
 
                             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
