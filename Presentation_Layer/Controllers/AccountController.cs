@@ -250,7 +250,7 @@ namespace Presentation_Layer.Controllers
             }
         }
 
-        public IActionResult GoogleLogin()
+   /*     public IActionResult GoogleLogin()
         {
             var prop = new AuthenticationProperties()
             {
@@ -270,7 +270,7 @@ namespace Presentation_Layer.Controllers
                 claims.Value
             });
             return RedirectToAction("Index", "Home");
-        }
+        }*/
 
 
         public IActionResult CheckYourInbox() => View();

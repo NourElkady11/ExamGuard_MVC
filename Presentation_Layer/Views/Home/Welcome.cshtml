@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="welcome-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+<div class="welcome-container mt-0" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
     <!-- Fullscreen Background Image -->
     <img src="~/Files/Images/Cheating-in-Exams.jpg" alt="Cheating in Exams"
          style="width: 100%; height: 100%; object-fit: cover; filter: brightness(70%);" />
@@ -16,7 +16,7 @@
         <p style="font-size: 1.5rem; margin-top: 20px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);">
             Your ultimate solution for monitoring and managing academic integrity.
         </p>
-        <a href="Home/Index" class="btn btn-primary btn-lg" style="margin-top: 30px; padding: 15px 30px; font-size: 1.2rem;">
+        <a asp-action="Login" asp-controller="Account" class="btn btn-primary btn-lg" style="margin-top: 30px; padding: 15px 30px; font-size: 1.2rem;">
             Get Started
         </a>
     </div>
