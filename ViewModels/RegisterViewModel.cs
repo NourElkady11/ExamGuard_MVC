@@ -17,9 +17,11 @@ namespace Presentation_Layer.ViewModels
 		public string Email { get; set; }
 
 		[DataType(DataType.Password)]
+
 		public string Password { get; set; }
 
-		[Compare(nameof(Password),ErrorMessage ="Password Dosent match the Confirm Password")]
+        [DataType(DataType.Password)]
+        [Compare(nameof(Password),ErrorMessage ="Password Dosent match the Confirm Password")]
 		public string ConfirmPasword { get; set; }
 
 		public bool Isagree { get; set; }
